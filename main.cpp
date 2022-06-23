@@ -113,12 +113,6 @@ public:
 
 };
 
-
-
-
-
-
-
 void Menu()
 {
 	cout << "\t\t\tSTOCK MANAGEMENT SYSTEM\n" << endl;
