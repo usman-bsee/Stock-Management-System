@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 class company
@@ -138,7 +139,11 @@ void Menu()
 
 int main()
 {
-	Menu();
+	//Menu();
+	ifstream fout;
+	fout.open("data.csv");
+	string temp;
+
 
 	return 0;
 }
