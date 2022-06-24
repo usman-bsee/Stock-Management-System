@@ -16,7 +16,6 @@
 #### StocksOwnerDetails():
 - Print all the details of the owners who purchased the stocks.
 
-#### NOTE: ALL THE REQUIRED FILES ARE ATTACHED WITH THIS REPOSITORY INCLUDING DATA AND DETAILS FILES.
 
 ## Customer Class:
 1. Owner
@@ -34,3 +33,9 @@ Ask Login Credentials
 - - Ask all the details.
 - If no,
 - - Exit
+
+
+
+
+
+#### NOTE: ALL THE REQUIRED FILES ARE ATTACHED WITH THIS REPOSITORY INCLUDING DATA AND DETAILS FILES.
