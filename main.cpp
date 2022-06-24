@@ -3,12 +3,14 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 class company
 {
 protected:
 	int company_option;
+	string cp_sr, cp_name = " ", cp_category, cp_price, cp_tid, cp_fname, cp_sname, cp_address, cp_city, cp_cnic, cp_contact;
 public:
 	void ShortMenu()
 	{
@@ -52,22 +54,98 @@ public:
 	void AllStocks()
 	{
 		ShortMenu();
-		cout << "\n\t\t\tAll stocks" << endl;
+		string check="";
+		ifstream fout;
+		fout.open("data.csv");
+		cout << "Sr.\tFull Name\tCategory\tPrice\tTID\n\n";
+
+		for (int i = 0; fout; i++)
+		{
+			getline(fout, cp_sr, ',');
+			getline(fout, cp_name, ',');
+			getline(fout, cp_category, ',');
+			getline(fout, cp_price, ',');
+			getline(fout, cp_tid, '\n');
+			if (check == cp_name)
+				break;
+			check = cp_name;
+			cout << cp_sr << "\t" << cp_name << "\t" << cp_category << "\t" << cp_price << "\t" << cp_tid << endl;
+		}
+	
 	}
 	void SoldStocks()
 	{
 		ShortMenu();
-		cout << "\n\t\t\tSold stocks" << endl;
+		string check = "";
+		ifstream fout;
+		fout.open("data.csv");
+		cout << "Sr.\tFull Name\tCategory\tPrice\tTID\n\n";
+
+		for (int i = 0; fout; i++)
+		{
+			getline(fout, cp_sr, ',');
+			getline(fout, cp_name, ',');
+			getline(fout, cp_category, ',');
+			getline(fout, cp_price, ',');
+			getline(fout, cp_tid, '\n');
+			if (check == cp_name)
+				break;
+			check = cp_name;
+			if(cp_category=="Seller   ")
+				cout << cp_sr << "\t" << cp_name << "\t" << cp_category << "\t" << cp_price << "\t" << cp_tid << endl;
+		}
+
 	}
 	void AvailableStocks()
 	{
 		ShortMenu();
-		cout << "\n\t\t\tAvailable stocks" << endl;
+		string check = "";
+		ifstream fout;
+		fout.open("data.csv");
+		cout << "Sr.\tFull Name\tCategory\tPrice\tTID\n\n";
+
+		for (int i = 0; fout; i++)
+		{
+			getline(fout, cp_sr, ',');
+			getline(fout, cp_name, ',');
+			getline(fout, cp_category, ',');
+			getline(fout, cp_price, ',');
+			getline(fout, cp_tid, '\n');
+			if (check == cp_name)
+				break;
+			check = cp_name;
+			if(cp_category=="Available")
+				cout << cp_sr << "\t" << cp_name << "\t" << cp_category << "\t" << cp_price << "\t" << cp_tid << endl;
+		}
+
 	}
 	void StocksOwnerDetails()
 	{
 		ShortMenu();
-		cout << "\n\t\t\tStocks Owner Details" << endl;
+		ifstream fout;
+		string check = "";
+		fout.open("details.csv");
+		cout << "Sr.\tFull Name\t\tCNIC\t\tAddress\t\tCity\t\tContact\t\tPrice\tTID\n\n";
+
+		for (int i = 0; fout; i++)
+		{
+			getline(fout, cp_sr, ',');
+			getline(fout, cp_fname, ',');
+			getline(fout, cp_sname, ',');
+			getline(fout, cp_cnic, ',');
+			getline(fout, cp_address, ',');
+			getline(fout, cp_city, ',');
+			getline(fout, cp_contact, ',');
+			getline(fout, cp_price, ',');
+			getline(fout, cp_tid, '\n');
+			if (check == cp_fname)
+				break;
+			check = cp_fname;
+			cout << cp_sr << "\t" << cp_fname << " " << cp_sname << "\t" << cp_cnic << "\t" << cp_address
+				<< "\t" << cp_city << "\t" << cp_contact << "\t" << cp_price << "\t" << cp_tid << endl;
+		}
+
+
 	}
 };
 
@@ -139,10 +217,7 @@ void Menu()
 
 int main()
 {
-	//Menu();
-	ifstream fout;
-	fout.open("data.csv");
-	string temp;
+	Menu();
 
 
 	return 0;
