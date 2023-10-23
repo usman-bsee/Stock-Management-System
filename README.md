@@ -35,3 +35,16 @@ Ask Login Credentials
 - - Exit
 
 #### NOTE: ALL THE REQUIRED FILES ARE ATTACHED WITH THIS REPOSITORY INCLUDING DATA AND DETAILS FILES.
+
+If this repository could help you, please cite the following paper:
+```
+@misc{stockmanagementsystem,
+  author = Usman Salman,
+  title = "Stock Management System",
+  published = "\url{https://github.com/usman-bsee/Stock-Management-System}",
+  year = "2022"
+}
+```
+
+
+
